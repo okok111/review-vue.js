@@ -3,13 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Document</title>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <!--  -->
+    <div id="app1">{{ message }}</div>
+    <hr>
+    
+    <div id="app2">
+        <p>
+            {{ message}}
+        </p>
+    </div>
+    <hr>
+
+    <div id="app3">
+        <p>{{ message}}</p>
+        <p>{{ count }}</p>
+        <p>{{ user.prefecture }}</p>
+        <p>
+            {{ colors[3]}}
+        </p>
+    </div>
+
+    <hr>
+    <div id="app4">
+        <input type="text" name="" id="" v-bind:value="message" placeholder="文字が入る">
+    </div>
+
+    <hr>
+    <div id="app5">
+        <p v-if="toggle">Hello</p>
+    </div>
+    
+    <hr>
+    <div id="app6">
+        <ol>
+            <li v-for="color in colors">{{ color }}</li>
+        </ol>
+    </div>
+    
+    <hr>
+    <div id="app7">
+        <ul>
+            <li v-for="value in user">
+                {{ value }}
+            </li>
+            <hr>
+            <li v-for="(value, key) in user">
+                {{ key }} :{{ value }}
+            </li>
+    </ul>
+    </div>
+
+    <hr>
+    <div id="app8">
+        <button v-on:click="onclick">Click here!</button>
+        <p> {{ now }}</p>
+    </div>
+    
+    <hr>
+    <div id="app9">
+        <p>
+            <input type="text" v-model="message">
+        </p>
+
+        <p>
+            <input type="text" v-model="message">
+        </p>
+        <pre> 
+            {{ $data }}
+        </pre>
+    </div>
+
+    <hr>
+    <div id="app10">
+        <hello-component></hello-component>
+        <hello-component></hello-component>
+        <hello-component></hello-component>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="index.js"></script> 
 </body>
 </html>
