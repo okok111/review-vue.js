@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p v-if="toggle">
+      yes
+    </p>
+    <p v-else>
+      No
+    </p>
+  </div>
+
+  <hr>v-if-else
+  <div id="v-else-if">
+    <p v-if="color === 'red' ">
+      stop
+    </p>
+    <p v-else-if="color === 'yellow'">
+      caution
+    </p>
+    <p v-else-if="color === 'blue'">
+      Gogogo
+    </p>
+    <p v-else>
+      undefind
+    </p>
+  </div>
+
+  <hr>v-show
+  <div id="v-show">
+    <p v-show="toggle">
+      v-showだよ
+    </p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="index.js"></script> 
+</body>
+</html>
