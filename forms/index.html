@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+      <pre>{{ $data }}</pre>
+      <p>
+        {{ message }}
+      </p>
+      <input type="text" v-model="message" placeholder="text"><br>
+      <textarea v-model="message" placeholder="textarea"></textarea>
+
+      <h2>checkbox</h2>
+      <label for="checkbox">{{ checked }}</label>
+      <input type="checkbox" id="checkbox" v-model="checked ">
+
+      <h2>checkbox複数</h2>
+      <label for="red">Red</label>
+      <input type="checkbox" id="red" value="red" v-model="colors">
+      <label for="green">green</label>
+      <input type="checkbox" id="green" value="green" v-model="colors">
+      <label for="blue">blue</label>
+      <input type="checkbox" id="blue" value="blue" v-model="colors">
+      <p>
+        {{ colors }}
+      </p>
+
+      <h2>radio button</h2>
+      <input type="radio" id="r-red" value="red" v-model="color">
+      <label for="r-red">red</label>
+      <input type="radio" id="r-green" value="green" v-model="color">
+      <label for="r-green">green</label>
+      <input type="radio" id="r-blue" value="blue" v-model="color">
+      <label for="r-blue">blue</label>
+      <p>
+        {{ color }}
+      </p>
+
+      <h2>selectbox</h2>
+      <select v-model="selected">
+        <option disabled value="">please select one</option>
+        <option >Red</option>
+        <option>Blue</option>
+        <option >Green</option>
+      </select>
+      <p>
+        {{ selected }}
+      </p>
+      <h2>selectbox複数選択</h2>
+      <select v-model="selects" multiple >
+        <option >Red</option>
+        <option>Blue</option>
+        <option >Green</option>
+      </select>
+      <p>
+        {{ selects }}
+      </p>
+
+      <h2> About .lazy</h2>
+      確定するまで反映されない<br>
+      <input type="text" v-model.lazy="toLazy">
+      <p>
+        {{ toLazy }}
+      </p>
+      <h2> About .trim</h2>
+      入力値から前後の空白を削除してデータに代入<br>
+      <input type="text" v-model.trim="toTrim">
+      <p>
+        {{ toTrim }}
+      </p>
+        
+      <h2> About .number</h2>
+      入力値を数値型に変換してからデータ代入<br>
+      <input type="number" v-model.number="toNumber">
+      <p>
+        {{ toNumber }}
+      </p>
+    </div>
+
+
+    <br><br><br>
+    <hr>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>
