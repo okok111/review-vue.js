@@ -7,7 +7,8 @@ const app =Vue.createApp({
         addItem: function() {
             if(this.newItem === "")return
             let todo = {
-                item: this.newItem
+                item: this.newItem,
+                isDone: false
             }
             this.todos.push(todo)
             this.newItem = ""
