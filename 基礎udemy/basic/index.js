@@ -25,25 +25,27 @@ const app3 = Vue.createApp({
     colors:["red","blue","green","yellow"]
   })
 }).mount('#app3')
-
+// データバインディング
 const app4 = Vue.createApp({
   data:() => ({ 
     message: "helloooooooooo"
   })
 }).mount('#app4')
-
+// 条件分岐 v-if
 const app5 = Vue.createApp({
   data:() => ({ 
     toggle: true
   })
 }).mount('#app5')
 
+// v-for
 const app6 = Vue.createApp({
   data:() => ({ 
     colors:["red","blue","green","yellow"]
   })
 }).mount('#app6')
 
+// v-forディレクティブ
 const app7= Vue.createApp({
   data:() => ({ 
     user:{
@@ -54,6 +56,7 @@ const app7= Vue.createApp({
   })
 }).mount('#app7')
 
+// v-on
 const app8 = Vue.createApp({
   data:() => ({
     now: "..."
@@ -65,6 +68,7 @@ const app8 = Vue.createApp({
   }
 }).mount('#app8')
 
+// 双方向データバインディング
 const app9 = Vue.createApp({
   data:() => ({ 
     message: ""

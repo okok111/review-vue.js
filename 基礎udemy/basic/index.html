@@ -28,16 +28,19 @@
     </div>
 
     <hr>
+    <!-- データバインディング -->
     <div id="app4">
         <input type="text" name="" id="" v-bind:value="message" placeholder="文字が入る">
     </div>
 
     <hr>
+    <!-- 条件分岐　v-if -->
     <div id="app5">
         <p v-if="toggle">Hello</p>
     </div>
     
     <hr>
+    <!-- v-for -->
     <div id="app6">
         <ol>
             <li v-for="color in colors">{{ color }}</li>
@@ -45,6 +48,7 @@
     </div>
     
     <hr>
+    <!-- v-forディレクティブ -->
     <div id="app7">
         <ul>
             <li v-for="value in user">
@@ -58,12 +62,14 @@
     </div>
 
     <hr>
+    <!-- v-on -->
     <div id="app8">
-        <button v-on:click="onclick">Click here!</button>
+        <button v-on:click="onclick">現在時刻を表示</button>
         <p> {{ now }}</p>
     </div>
     
     <hr>
+    <!-- 双方向データバインディング -->
     <div id="app9">
         <p>
             <input type="text" v-model="message">
